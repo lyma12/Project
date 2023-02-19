@@ -1,0 +1,15 @@
+﻿<Application x:Class="Tic_Tac_Toe.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Tic_Tac_Toe"
+             StartupUri="MainWindow.xaml">
+
+
+    <!--Mã màu background #9796F0, #FBC7D4-->
+    <!--liner and button #cb356b, #bd3f32-->
+    <!--button color #e1eec3, #f05053-->
+
+    <Application.Resources >
+        <ResourceDictionary Source="ButtonTheme.xaml" x:Name="ButtonStyle"/>
+    </Application.Resources>
+</Application>

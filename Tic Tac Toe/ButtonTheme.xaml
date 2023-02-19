@@ -1,0 +1,53 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Button">
+        <Setter Property="Foreground" Value="#bd3f32"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Margin" Value="0, 5, 0, 5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="#bd3f32"
+                            CornerRadius="30"
+                            BorderThickness="3">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="true"/>
+                    <Condition Property="IsPressed" Value="true"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="#f05053"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="true"/>
+                    <Condition Property="IsPressed" Value="false"/>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="#e1eec3"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#bd3f32"/>
+    </Style>
+
+
+    
+    
+</ResourceDictionary>
